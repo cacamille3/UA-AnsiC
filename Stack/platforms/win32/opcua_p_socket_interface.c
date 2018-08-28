@@ -641,6 +641,7 @@ OpcUa_StatusCode OPCUA_DLLCALL OpcUa_P_Socket_GetLastError(OpcUa_Socket a_pSocke
     OpcUa_SocketServiceTable** ppSocketServiceTable = (OpcUa_SocketServiceTable**)a_pSocket;
 
     OpcUa_ReturnErrorIfArgumentNull(a_pSocket);
+    OpcUa_ReturnErrorIfArgumentNull(*ppSocketServiceTable);
 
     return (*ppSocketServiceTable)->SocketGetLastError(a_pSocket);
 }
@@ -672,6 +673,7 @@ OpcUa_StatusCode OPCUA_DLLCALL OpcUa_P_Socket_Read( OpcUa_Socket    a_pSocket,
     OpcUa_SocketServiceTable** ppSocketServiceTable = (OpcUa_SocketServiceTable**)a_pSocket;
 
     OpcUa_ReturnErrorIfArgumentNull(a_pSocket);
+    OpcUa_ReturnErrorIfArgumentNull(*ppSocketServiceTable);
 
     return (*ppSocketServiceTable)->SocketRead(a_pSocket, a_pBuffer, a_nBufferSize, a_pBytesRead);
 }
@@ -688,6 +690,7 @@ OpcUa_Int32 OPCUA_DLLCALL OpcUa_P_Socket_Write( OpcUa_Socket    a_pSocket,
     OpcUa_SocketServiceTable** ppSocketServiceTable = (OpcUa_SocketServiceTable**)a_pSocket;
 
     OpcUa_ReturnErrorIfArgumentNull(a_pSocket);
+    OpcUa_ReturnErrorIfArgumentNull(*ppSocketServiceTable);
 
     return (*ppSocketServiceTable)->SocketWrite(a_pSocket, a_pBuffer, a_uBufferSize, a_bBlock);
 }
@@ -700,6 +703,7 @@ OpcUa_StatusCode OPCUA_DLLCALL OpcUa_P_Socket_Close(OpcUa_Socket a_pSocket)
     OpcUa_SocketServiceTable** ppSocketServiceTable = (OpcUa_SocketServiceTable**)a_pSocket;
 
     OpcUa_ReturnErrorIfArgumentNull(a_pSocket);
+    OpcUa_ReturnErrorIfArgumentNull(*ppSocketServiceTable);
 
     return (*ppSocketServiceTable)->SocketClose(a_pSocket);
 }
@@ -714,6 +718,7 @@ OpcUa_StatusCode OPCUA_DLLCALL OpcUa_P_Socket_GetPeerInfo(  OpcUa_Socket a_pSock
     OpcUa_SocketServiceTable** ppSocketServiceTable = (OpcUa_SocketServiceTable**)a_pSocket;
 
     OpcUa_ReturnErrorIfArgumentNull(a_pSocket);
+    OpcUa_ReturnErrorIfArgumentNull(*ppSocketServiceTable);
 
     return (*ppSocketServiceTable)->SocketGetPeerInfo(a_pSocket, a_achPeerInfoBuffer, a_uiPeerInfoBufferSize);
 }
@@ -747,6 +752,7 @@ OpcUa_StatusCode OPCUA_DLLCALL OpcUa_P_Socket_SetUserData( OpcUa_Socket a_pSocke
     OpcUa_SocketServiceTable** ppSocketServiceTable = (OpcUa_SocketServiceTable**)a_pSocket;
 
     OpcUa_ReturnErrorIfArgumentNull(a_pSocket);
+    OpcUa_ReturnErrorIfArgumentNull(*ppSocketServiceTable);
 
     return (*ppSocketServiceTable)->SocketSetUserData(a_pSocket, a_pvUserData);
 
