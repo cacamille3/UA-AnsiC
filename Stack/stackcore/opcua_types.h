@@ -141,7 +141,8 @@ typedef enum _OpcUa_AccessLevelType
     OpcUa_AccessLevelType_CurrentRead    = 1,
     OpcUa_AccessLevelType_CurrentWrite   = 2,
     OpcUa_AccessLevelType_HistoryRead    = 4,
-    OpcUa_AccessLevelType_HistoryWrite   = 16,
+    OpcUa_AccessLevelType_HistoryWrite   = 8,
+    OpcUa_AccessLevelType_SemanticChange = 16,
     OpcUa_AccessLevelType_StatusWrite    = 32,
     OpcUa_AccessLevelType_TimestampWrite = 64
 #if OPCUA_FORCE_INT32_ENUMS
@@ -167,12 +168,13 @@ typedef enum _OpcUa_AccessLevelExType
     OpcUa_AccessLevelExType_CurrentRead        = 1,
     OpcUa_AccessLevelExType_CurrentWrite       = 2,
     OpcUa_AccessLevelExType_HistoryRead        = 4,
-    OpcUa_AccessLevelExType_HistoryWrite       = 16,
+    OpcUa_AccessLevelExType_HistoryWrite       = 8,
+    OpcUa_AccessLevelExType_SemanticChange     = 16,
     OpcUa_AccessLevelExType_StatusWrite        = 32,
     OpcUa_AccessLevelExType_TimestampWrite     = 64,
-    OpcUa_AccessLevelExType_NonatomicRead      = 65536,
-    OpcUa_AccessLevelExType_NonatomicWrite     = 131072,
-    OpcUa_AccessLevelExType_WriteFullArrayOnly = 262144
+    OpcUa_AccessLevelExType_NonatomicRead      = 256,
+    OpcUa_AccessLevelExType_NonatomicWrite     = 512,
+    OpcUa_AccessLevelExType_WriteFullArrayOnly = 1024
 #if OPCUA_FORCE_INT32_ENUMS
     ,_OpcUa_AccessLevelExType_MaxEnumerationValue = OpcUa_Int32_Max
 #endif
