@@ -106,7 +106,7 @@ The following tree shows the directory layout as required by the included projec
 - |     |- transport
 - |        |- https                  HTTPS transport (optional)
 - |        |- tcp                    OPC TCP Binary transport
-- |- AnsiCSample						Simple example of an OPC UA nano embedded server
+- |- AnsiCSample	             Simple example of an OPC UA nano embedded server
 - |- openssl-1.0.2j                  Required third-party libraries
 ```
 
